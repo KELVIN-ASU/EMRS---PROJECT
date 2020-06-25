@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.AdminMenuBarController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="710.0" prefWidth="1051.0">
+         <top>
+            <AnchorPane prefHeight="50.0" prefWidth="1080.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="doctorsBtn" layoutX="7.0" onAction="#handleDoctorsBtn" prefHeight="47.0" prefWidth="163.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="DOCTORS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/017-doctor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="receptionistsBtn" layoutX="172.0" layoutY="1.0" onAction="#handleReceptionistsBtn" prefHeight="47.0" prefWidth="182.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="RECEPTIONISTS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/receptionist-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="pharmacistsBtn" layoutX="357.0" onAction="#handlePharmacistsBtn" prefHeight="47.0" prefWidth="199.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="PHARMACIST">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/Pharmacist-Male.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="biologistsBtn" layoutX="558.0" layoutY="1.0" onAction="#handleBiologistBtn" prefHeight="47.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="BIOLOGISTS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/Pharmacist-Male.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="adminsBtn" layoutX="736.0" layoutY="1.0" onAction="#handleAdminsBtn" prefHeight="47.0" prefWidth="181.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="ADMINS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/admin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="othersBtn" layoutX="919.0" onAction="#handleExitBtn" prefHeight="47.0" prefWidth="159.0" style="-fx-background-color: #ffffff;" styleClass="menuBtn" stylesheets="@myStyle.css" text="OTHERS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="36.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICONS/add-user-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

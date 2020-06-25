@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="710.0" prefWidth="1200.0" styleClass="bgBody" stylesheets="@myStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.AdminDashBoardController">
+   <children>
+      <AnchorPane layoutY="177.0" prefHeight="320.0" prefWidth="252.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="weekDayLabel" alignment="CENTER" layoutX="18.0" layoutY="18.0" prefHeight="30.0" prefWidth="191.0" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthDayLabel" alignment="CENTER" layoutX="18.0" layoutY="72.0" prefHeight="30.0" prefWidth="191.0" textFill="RED">
+               <font>
+                  <Font name="System Italic" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthYearLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="120.0" prefHeight="43.0" prefWidth="181.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="12.0" layoutY="188.0" prefHeight="43.0" prefWidth="208.0" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="addUsersBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="273.0" layoutY="225.0" onAction="#handleAddUsersBtn" prefHeight="126.0" prefWidth="162.0" style="-fx-background-color: lightblue;" text="ADD USERS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="120.0" layoutX="341.0" layoutY="254.0" mouseTransparent="true" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/add-user-icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="viewUserBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="441.0" layoutY="225.0" onAction="#handleViewUsersBtn" prefHeight="126.0" prefWidth="162.0" style="-fx-background-color: #993399;" text="VIEW USERS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="120.0" focusTraversable="true" layoutX="492.0" layoutY="254.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/icons8-database-48.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1152.0" prefHeight="710.0" prefWidth="48.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fx:id="powerImage" fitHeight="43.0" fitWidth="33.0" layoutX="6.0" layoutY="174.0" onMouseClicked="#handlePowerImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="aboutImage" fitHeight="43.0" fitWidth="33.0" layoutX="9.0" layoutY="255.0" onMouseClicked="#howAboutImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/about%20button_LI.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="lockImage" fitHeight="43.0" fitWidth="33.0" layoutX="9.0" layoutY="346.0" onMouseClicked="#handleLockScreenImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/lock.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fitHeight="117.0" fitWidth="261.0" layoutX="620.0" layoutY="227.0" pickOnBounds="true">
+         <image>
+            <Image url="@ICONS/hospital%20admin%20with%20pc.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="searchAndReportBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="273.0" layoutY="370.0" onAction="#handleSearchAndReportBtn" prefHeight="117.0" prefWidth="334.0" style="-fx-background-color: lightpink;" text="SEARCH AND REPORT" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="33.0" layoutX="424.0" layoutY="394.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/Search-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="adminProfilePicture" fitHeight="211.0" fitWidth="145.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/people.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="adminIDLable" layoutX="206.0" layoutY="43.0" prefHeight="21.0" prefWidth="162.0" text="NAME: SAMUEL AYUK" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="adminNameLable" layoutX="206.0" layoutY="81.0" prefHeight="21.0" prefWidth="162.0" text="PHONE: 679087612" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="adminLoginLable" layoutX="206.0" layoutY="15.0" prefHeight="21.0" prefWidth="162.0" text="ID: 1" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Text fill="WHITE" layoutX="389.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRONIC MEDICAL RECORDS SYSTEM">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="389.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMINISTRATION DEPARTMENT">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

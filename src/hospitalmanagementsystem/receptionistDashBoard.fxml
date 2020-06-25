@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1128.0" styleClass="bgBody" stylesheets="@myStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.ReceptionistDashBoardController">
+   <children>
+      <Text fill="WHITE" layoutX="441.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRONIC MEDICAL RECORDS SYSTEM">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="441.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECEPTION DEPARTMENT">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="138.0" fitWidth="200.0" layoutX="9.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/Admin-ass.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="226.0" layoutY="10.0" text="ID: 1" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="31.0" text="NAME: JULIETTE EWANG" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="60.0" text="PHONE: 672-732-968" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="1079.0" prefHeight="665.0" prefWidth="49.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fx:id="powerImage" fitHeight="28.0" fitWidth="30.0" layoutX="10.0" layoutY="97.0" onMouseClicked="#handlePowerImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="aboutImage" fitHeight="28.0" fitWidth="30.0" layoutX="11.0" layoutY="190.0" onMouseClicked="#handleAboutImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/about%20button_LI.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoutImage" fitHeight="28.0" fitWidth="30.0" layoutX="11.0" layoutY="279.0" onMouseClicked="#handleLogoutImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/lock.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="173.0" prefHeight="226.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="weekDayLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="28.0" prefWidth="164.0" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthDayLabel" alignment="CENTER" layoutX="18.0" layoutY="62.0" prefHeight="45.0" prefWidth="164.0" textFill="#f50f0f">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthYearLabel" alignment="CENTER" layoutX="18.0" layoutY="120.0" prefHeight="28.0" prefWidth="164.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="18.0" layoutY="175.0" prefHeight="28.0" prefWidth="164.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="registerPatientBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="231.0" layoutY="173.0" onAction="#handleRegisterPatientBtn" prefHeight="133.0" prefWidth="277.0" style="-fx-background-color: lightblue;" text="REGISTER PATIENT" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="352.0" layoutY="222.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/add-user-icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="leavePatientBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="230.0" layoutY="312.0" onAction="#handleLeavePatientBtn" prefHeight="81.0" prefWidth="136.0" style="-fx-background-color: #993399;" text="LEAVE PATIENT" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton fx:id="searchPatientBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="373.0" layoutY="312.0" onAction="#handleSearchPatientBtn" prefHeight="81.0" prefWidth="136.0" style="-fx-background-color: orange;" text="SEARCH PATIENT" textAlignment="CENTER" textFill="WHITE" />
+      <ImageView fitHeight="35.0" fitWidth="26.0" layoutX="285.0" layoutY="340.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/ic_content_paste_white_24dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="26.0" layoutX="428.0" layoutY="339.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/Search-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="133.0" fitWidth="306.0" layoutX="527.0" layoutY="173.0" pickOnBounds="true">
+         <image>
+            <Image url="@ICONS/depositphotos_23070674-stock-photo-african-medical-nurse-measuring-patients.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

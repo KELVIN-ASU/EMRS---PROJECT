@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1195.0" styleClass="bgBody" stylesheets="@myStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.DoctorDashBoardController">
+   <children>
+      <Label fx:id="idLabel" layoutX="259.0" layoutY="8.0" prefHeight="29.0" prefWidth="201.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="nameLabel" layoutX="259.0" layoutY="37.0" prefHeight="29.0" prefWidth="201.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="specialtyLabel" layoutX="259.0" layoutY="66.0" prefHeight="29.0" prefWidth="201.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="phoneLabel" layoutX="259.0" layoutY="95.0" prefHeight="29.0" prefWidth="201.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Text fill="WHITE" layoutX="460.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRONIC MEDICAL RECORDS SYSTEM " textAlignment="CENTER" wrappingWidth="390.13671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="584.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOCTORS DEPARTMENT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="doctorProfilePic" fitHeight="186.0" fitWidth="208.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="1153.0" prefHeight="697.0" prefWidth="42.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fx:id="powerImage" fitHeight="29.0" fitWidth="33.0" layoutX="7.0" layoutY="123.0" onMouseClicked="#handlePowerImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/logout.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="aboutImage" fitHeight="29.0" fitWidth="33.0" layoutX="11.0" layoutY="271.0" onMouseClicked="#handleAboutImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/about%20button_LI.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoutBtn" fitHeight="29.0" fitWidth="33.0" layoutX="11.0" layoutY="430.0" onMouseClicked="#handleLogoutImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/lock.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="queuedPatientsTable" layoutX="13.0" layoutY="240.0" prefHeight="200.0" prefWidth="440.0" stylesheets="@tourguide.css">
+        <columns>
+          <TableColumn fx:id="queuedPatientSSN" prefWidth="48.000030517578125" text="SSN " />
+          <TableColumn fx:id="queuedPatientName" prefWidth="149.0" text="NAMES" />
+            <TableColumn fx:id="queuedPatientGender" prefWidth="76.0" text="GENDER" />
+            <TableColumn fx:id="queuedPatientRegDate" prefWidth="165.0" text="INSERT DATE" />
+        </columns>
+      </TableView>
+      <TableView fx:id="labPatientsTable" layoutX="465.0" layoutY="240.0" prefHeight="200.0" prefWidth="440.0" stylesheets="@tourguide.css">
+         <columns>
+            <TableColumn fx:id="labPatientSSN" prefWidth="64.0" text="SSN " />
+            <TableColumn fx:id="labPatientName" prefWidth="108.0" text="NAMES" />
+            <TableColumn fx:id="labPatientGender" prefWidth="127.0" text="GENDER" />
+            <TableColumn fx:id="labPatientRegDate" prefWidth="156.0" text="INSERT DATE" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="109.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PATIENTS IN WAITING QUEUE" textAlignment="CENTER" wrappingWidth="235.4799868836999">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="528.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PATIENTS SENT TO LAB" textAlignment="CENTER" wrappingWidth="235.47999131679535">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <Line endX="7.0" endY="0.5" layoutX="102.0" layoutY="206.0" startX="-80.0" startY="0.5" stroke="WHITE" />
+      <Line endX="-9.0" layoutX="424.0" layoutY="206.0" startX="-79.0" stroke="WHITE" />
+      <Line endX="-3.0" layoutX="558.0" layoutY="204.0" startX="-94.0" stroke="WHITE" />
+      <Line endX="88.0" layoutX="814.0" layoutY="206.0" startX="-79.0" stroke="WHITE" />
+      <JFXButton fx:id="refreshTablesBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="14.0" layoutY="450.0" onAction="#handleRefreshTablesBtn" prefHeight="55.0" prefWidth="150.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="REFRESH TABLES" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="attendToBtn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="174.0" layoutY="450.0" onAction="#handleAttendToBtn" prefHeight="55.0" prefWidth="139.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="ATTENT TO" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="time" alignment="CENTER" contentDisplay="CENTER" layoutX="921.0" layoutY="361.0" prefHeight="62.0" prefWidth="226.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

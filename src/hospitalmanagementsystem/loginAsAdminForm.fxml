@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.LoginAsAdminFormController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="630.0" style="-fx-background-color: #009999;">
+         <children>
+            <Text fill="WHITE" layoutX="107.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRONIC HEALTH INFORMATION SYSTEM " textAlignment="CENTER" wrappingWidth="463.13671875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fill="#009999" layoutX="216.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMINISTRATOR LOGIN" textAlignment="CENTER" wrappingWidth="221.13671875">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Label layoutX="71.0" layoutY="176.0" prefHeight="36.0" prefWidth="72.0" text="USER NAME:" textFill="#009999" />
+      <JFXTextField fx:id="adminUserNameField" focusColor="#009999" layoutX="143.0" layoutY="169.0" prefHeight="25.0" prefWidth="327.0" />
+      <Label layoutX="71.0" layoutY="234.0" prefHeight="36.0" prefWidth="72.0" text="PASSWORD:" textFill="#009999" />
+      <JFXPasswordField fx:id="adminPasswordField" focusColor="#009999" layoutX="143.0" layoutY="227.0" prefHeight="25.0" prefWidth="327.0" />
+      <JFXButton fx:id="homeBtn" buttonType="RAISED" layoutX="129.0" layoutY="310.0" onAction="#handleHomeBtn" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: #009999;" text="HOME" textAlignment="CENTER" textFill="WHITE" />
+      <JFXButton fx:id="loginBtn" buttonType="RAISED" layoutX="307.0" layoutY="310.0" onAction="#handleAdminLoginBtn" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: #009999;" text="LOGIN" textAlignment="CENTER" textFill="WHITE" />
+   </children>
+</AnchorPane>

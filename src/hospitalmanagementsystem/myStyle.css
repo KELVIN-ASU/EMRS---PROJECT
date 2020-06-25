@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 1, 2020, 7:28:00 PM
+    Author     : Ekuri PC
+*/
+.bgBody{
+    -fx-background-image: url("bg.png");
+}
+
+.menuBtn:hover{
+    -fx-border-color: #009999;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+
+
+

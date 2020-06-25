@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.ViewPatientsTableController">
+   <children>
+      <TableView fx:id="patientTable" layoutX="10.0" layoutY="88.0" prefHeight="230.0" prefWidth="1050.0" style="-fx-border-color: #009999;" stylesheets="@tourguide.css">
+        <columns>
+          <TableColumn fx:id="ssnCol" prefWidth="42.0" text="SSN" />
+          <TableColumn fx:id="nameCol" prefWidth="108.0" text="NAME" />
+            <TableColumn fx:id="genderCol" prefWidth="75.0" text="GENDER" />
+            <TableColumn fx:id="dobCol" prefWidth="75.0" text="DOB" />
+            <TableColumn fx:id="addressCol" prefWidth="99.0" text="ADDRESS" />
+            <TableColumn fx:id="heightCol" prefWidth="64.0" text="HEIGHT" />
+            <TableColumn fx:id="weightCol" prefWidth="67.0" text="WEIGHT" />
+            <TableColumn fx:id="phoneCol" prefWidth="99.0" text="PHONE" />
+            <TableColumn fx:id="bloodGroupCol" prefWidth="96.0" text="BLOOD GROUP" />
+            <TableColumn fx:id="doctorAssignedCol" prefWidth="133.0" text="DOCTOR ASSIGNED" />
+            <TableColumn fx:id="regDateCol" prefWidth="186.0" text="REGISTRATION DATE" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchBar" layoutX="678.0" layoutY="45.0" prefHeight="32.0" prefWidth="308.0" promptText="ENTER PATIENT SSN, NAME OR GENDER TO SEARCH" style="-fx-background-radius: 70px;" />
+   </children>
+</AnchorPane>

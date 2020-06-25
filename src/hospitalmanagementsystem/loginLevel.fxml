@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="507.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.loginLevelController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane layoutY="177.0" prefHeight="338.0" prefWidth="201.0" style="-fx-background-color: #006666;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="127.0" prefHeight="38.0" prefWidth="170.0" text="to" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="172.0" prefHeight="63.0" prefWidth="170.0" text="Mini Hospital" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="64.0" prefHeight="63.0" prefWidth="170.0" text="WELCOME" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="102.0" prefHeight="54.0" prefWidth="133.0" style="-fx-background-color: #0099CC;">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="63.0" prefWidth="116.0" text="LOGIN AS" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-4.0" prefHeight="83.0" prefWidth="833.0" style="-fx-background-color: #009999;">
+         <children>
+            <Text fill="WHITE" layoutX="121.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELECTRONIC HEALTH INFORMATION SYSTEM" textAlignment="CENTER" wrappingWidth="582.13671875">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="adminBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="211.0" layoutY="211.0" onAction="#handleAdminBtn" prefHeight="83.0" prefWidth="158.0" style="-fx-background-color: white;" text="ADMIN" />
+      <ImageView fitHeight="38.0" fitWidth="35.0" focusTraversable="true" layoutX="273.0" layoutY="220.0" mouseTransparent="true" opacity="0.6" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ICONS/admin.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="receptionistBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="551.0" layoutY="211.0" onAction="#handleReceptionistBtn" prefHeight="83.0" prefWidth="158.0" style="-fx-background-color: white;" text="RECEPTIONIST" />
+      <JFXButton fx:id="doctorBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="381.0" layoutY="211.0" onAction="#handleDoctorBtn" prefHeight="83.0" prefWidth="158.0" style="-fx-background-color: white;" text="DOCTOR" />
+      <ImageView fitHeight="38.0" fitWidth="35.0" focusTraversable="true" layoutX="443.0" layoutY="220.0" mouseTransparent="true" opacity="0.61" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ICONS/017-doctor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="35.0" focusTraversable="true" layoutX="613.0" layoutY="220.0" mouseTransparent="true" opacity="0.6" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ICONS/receptionist-icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="pharmacistBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="212.0" layoutY="319.0" onAction="#handlePharmacistBtn" prefHeight="83.0" prefWidth="158.0" style="-fx-background-color: white;" text="PHARMACIST" />
+      <JFXButton fx:id="biologistBtn" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="393.0" layoutY="319.0" onAction="#handleBiologistBtn" prefHeight="83.0" prefWidth="158.0" style="-fx-background-color: white;" text="BIOLOGIST" />
+      <ImageView fitHeight="38.0" fitWidth="35.0" focusTraversable="true" layoutX="274.0" layoutY="335.0" mouseTransparent="true" opacity="0.6" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ICONS/Pharmacist-Male.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="35.0" focusTraversable="true" layoutX="455.0" layoutY="335.0" mouseTransparent="true" opacity="0.6" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@ICONS/nurse-48.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospitalmanagementsystem.BiologistTableViewController">
+   <children>
+      <TableView fx:id="biologistTable" layoutX="38.0" layoutY="75.0" prefHeight="222.0" prefWidth="1027.0" stylesheets="@tourguide.css">
+        <columns>
+          <TableColumn fx:id="biologistIDColumn" prefWidth="62.0" text="ID" />
+          <TableColumn fx:id="biologistNameColumn" prefWidth="115.99998474121094" text="NAME" />
+            <TableColumn fx:id="biogistGenderColumn" prefWidth="81.0" text="GENDER" />
+            <TableColumn fx:id="biologistAddressColumn" prefWidth="121.0" text="ADDRESS" />
+            <TableColumn fx:id="biologistDOBColumn" prefWidth="104.0" text="DATE OF BIRTH" />
+            <TableColumn fx:id="biologistRegDateColumn" prefWidth="132.0" text="REGISTRATION DATE" />
+            <TableColumn fx:id="biologistPhoneNumColumn" prefWidth="108.0" text="PHONE NUMBER" />
+            <TableColumn fx:id="biologistUserNameColumn" prefWidth="153.0" text="USERNAME" />
+            <TableColumn fx:id="biologistPasswordColumn" prefWidth="148.0" text="PASSWORD" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchBar" layoutX="722.0" layoutY="21.0" prefHeight="39.0" prefWidth="330.0" promptText="ENTER BIOLOGIST NAME OR GENDER OR ADDRESS  " style="-fx-background-radius: 90px;" />
+      <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="1014.0" layoutY="28.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ICONS/Search-icon.png" />
+         </image>
+      </ImageView>
+      <Text fill="#009999" layoutX="479.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TABLE OF BIOLOGIST">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="852.0" layoutY="508.0" onAction="#handleDeleteBtn" prefHeight="52.0" prefWidth="190.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="DELETE RECORD" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="25.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/ic_delete_sweep_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="biologistNameField" focusColor="#0099ff" labelFloat="true" layoutX="271.0" layoutY="350.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST NAME" unFocusColor="#009999" />
+      <JFXTextField fx:id="biologistPasswordField" focusColor="#0099ff" labelFloat="true" layoutX="533.0" layoutY="461.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST PASSWORD" unFocusColor="#009999" />
+      <JFXTextField fx:id="biologistLoginName" focusColor="#0099ff" labelFloat="true" layoutX="271.0" layoutY="461.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST LOGIN NAME" unFocusColor="#009999" />
+      <JFXTextField fx:id="biologistAddressField" focusColor="#0099ff" labelFloat="true" layoutX="271.0" layoutY="405.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST ADDRESS" unFocusColor="#009999" />
+      <JFXTextField fx:id="biologistPhnField" focusColor="#0099ff" labelFloat="true" layoutX="533.0" layoutY="405.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST PHONE NUMBER" unFocusColor="#009999" />
+      <JFXTextField fx:id="biologistGenderField" editable="false" focusColor="#0099ff" labelFloat="true" layoutX="533.0" layoutY="350.0" prefHeight="25.0" prefWidth="238.0" promptText="BIOLOGIST GENDER" unFocusColor="#009999" />
+      <JFXComboBox fx:id="genderComboBox" focusColor="#0099ff" labelFloat="true" layoutX="829.0" layoutY="350.0" onAction="#getBiologistGenderFromGenderCmbBox" prefHeight="25.0" prefWidth="219.0" promptText="SELECT NEW BIOLOGIST GENDER" unFocusColor="#009999" />
+      <JFXDatePicker fx:id="biologistDOBPicker" editable="false" layoutX="826.0" layoutY="405.0" onAction="#passDateOfBirthValueToTextField" prefHeight="25.0" prefWidth="232.0" promptText="BIOLOGIST DATE OF BIRTH" />
+      <JFXButton fx:id="editRecordBtn" buttonType="RAISED" layoutX="655.0" layoutY="508.0" onAction="#handleEditRecord" prefHeight="52.0" prefWidth="190.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="EDIT RECORD" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="25.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/ic_create_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="updateRecordsBtn" buttonType="RAISED" layoutX="456.0" layoutY="508.0" onAction="#handleUpdateRecordsBtn" prefHeight="52.0" prefWidth="190.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="UPDATE RECORD" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="25.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/ic_content_paste_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="biologistImage" fitHeight="190.0" fitWidth="232.0" layoutX="20.0" layoutY="303.0" pickOnBounds="true" />
+      <JFXButton fx:id="browseImageBtn" buttonType="RAISED" layoutX="35.0" layoutY="508.0" onAction="#handlebrowseImageBtn" prefHeight="52.0" prefWidth="190.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="BROWSE IMAGE" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="25.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/Documents-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="updateProfilePicBtn" buttonType="RAISED" layoutX="240.0" layoutY="508.0" onAction="#handleupdateProfilePicBtn" prefHeight="52.0" prefWidth="190.0" style="-fx-background-color: #009999; -fx-background-radius: 90px;" text="UPDATE IMAGE" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="25.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICONS/ic_image_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="dobHolderField" editable="false" focusColor="#0099ff" labelFloat="true" layoutX="817.0" layoutY="483.0" prefHeight="25.0" prefWidth="238.0" promptText="DATE OF BIRTH" unFocusColor="#009999" visible="false" />
+   </children>
+</AnchorPane>
